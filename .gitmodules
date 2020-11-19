@@ -1,0 +1,3 @@
+[submodule "citrix-adc-ansible-modules"]
+	path = citrix-adc-ansible-modules
+	url = https://github.com/citrix/citrix-adc-ansible-modules.git
