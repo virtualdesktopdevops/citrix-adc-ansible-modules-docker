@@ -4,8 +4,11 @@ ENV ANSIBLE_VERSION=2.9.2
 
 # Install Python3 and Ansible
 RUN set -xe \
-    && echo "****** Install system dependencies ******" \
-        && apk add --no-cache --progress python3 openssl ca-certificates git openssh sshpass \
+    && echo "****** Install python3 and system utilites ******" \
+    	&& apk add --no-cache --progress python3 openssl ca-certificates git openssh sshpass
+
+RUN set -xe \
+    && echo "****** Install system dependencies ******" \	
 	    && apk --update add --virtual build-dependencies python3-dev libffi-dev openssl-dev build-base \
 	&& echo "****** Install ansible and python dependencies ******" \
         && pip3 install --upgrade pip \
